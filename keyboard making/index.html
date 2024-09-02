@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyboard</title>
+  <style type="text/css">
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url("https://image.slidesdocs.com/responsive-images/background/bubble-nature-purple-light-effect-flower-cute-powerpoint-background_e976a8a2d7__960_540.jpg");
+      margin: 0;
+    }
+    .keyboard {
+      display: inline-block;
+      text-align: center;
+    }
+    input[type="button"] {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      animation: key 2s infinite;
+      margin: 5px;
+      box-sizing: border-box;
+    }
+    @keyframes key {
+      0% { box-shadow: 0px 0px 7px red; }
+      25% { box-shadow: 0px 0px 7px green; }
+      50% { box-shadow: 0px 0px 7px blue; }
+      75% { box-shadow: 0px 0px 7px yellow; }
+      100% { box-shadow: 0px 0px 7px orangered; }
+    }
+    input[type="button"]:hover {
+      transform: scale(1.1);
+    }
+    .space-btn-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      height: 30px;
+      width: 100px;
+      margin-left: calc(70% - 150px);
+    }
+    .space-btn {
+      margin: 10px;
+      flex: 1;
+
+    }
+  </style>
+</head>
+<body>
+  <div class="keyboard">
+    <form name="Keyboard">
+      <input type="text" name="screen" size="45" style="height:30px; font-size:15px; background:black; color:white;">
+      <br>
+      <input type="button" value="q" onclick="Keyboard.screen.value+='q'">
+      <input type="button" value="w" onclick="Keyboard.screen.value+='w'">
+      <input type="button" value="e" onclick="Keyboard.screen.value+='e'">
+      <input type="button" value="r" onclick="Keyboard.screen.value+='r'">
+      <input type="button" value="t" onclick="Keyboard.screen.value+='t'">
+      <input type="button" value="y" onclick="Keyboard.screen.value+='y'">
+      <input type="button" value="u" onclick="Keyboard.screen.value+='u'">
+      <input type="button" value="i" onclick="Keyboard.screen.value+='i'">
+      <input type="button" value="o" onclick="Keyboard.screen.value+='o'">
+      <input type="button" value="p" onclick="Keyboard.screen.value+='p'">
+      <br>
+      <input type="button" value="a" onclick="Keyboard.screen.value+='a'">
+      <input type="button" value="s" onclick="Keyboard.screen.value+='s'">
+      <input type="button" value="d" onclick="Keyboard.screen.value+='d'">
+      <input type="button" value="f" onclick="Keyboard.screen.value+='f'">
+      <input type="button" value="g" onclick="Keyboard.screen.value+='g'">
+      <input type="button" value="h" onclick="Keyboard.screen.value+='h'">
+      <input type="button" value="j" onclick="Keyboard.screen.value+='j'">
+      <input type="button" value="k" onclick="Keyboard.screen.value+='k'">
+      <input type="button" value="l" onclick="Keyboard.screen.value+='l'">
+      <br>
+      <input type="button" value="z" onclick="Keyboard.screen.value+='z'">
+      <input type="button" value="x" onclick="Keyboard.screen.value+='x'">
+      <input type="button" value="c" onclick="Keyboard.screen.value+='c'">
+      <input type="button" value="v" onclick="Keyboard.screen.value+='v'">
+      <input type="button" value="b" onclick="Keyboard.screen.value+='b'">
+      <input type="button" value="n" onclick="Keyboard.screen.value+='n'">
+      <input type="button" value="m" onclick="Keyboard.screen.value+='m'">
+      <input type="button" value="X" id="btn" ondblclick="Keyboard.screen.value=Keyboard.screen.value.slice(0,-1)">
+      <br>
+      <div class="space-btn-container">
+        <input type="button" value=" " class="space-btn" onclick="Keyboard.screen.value+=' '">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
